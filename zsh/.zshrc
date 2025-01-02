@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt. Must stay at the very top.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #---------------------------------------------AlIAS---------------------------------------------------------------------------------------------
 #alias
 alias ls='ls --color'
@@ -79,11 +84,6 @@ precmd() { update_title }
 export PATH=$PATH:~/Documents/zig-linux-x86_64-0.14.0-dev.2568+42dac40b3
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-
-# Enable Powerlevel10k instant prompt. Must stay at the very top.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # Disable instant prompt (suppress the warning)
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
