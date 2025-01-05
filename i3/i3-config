@@ -7,7 +7,7 @@ exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1366x768 --rate 60.0
 exec_always --no-startup-id bash -c "pkill polybar; polybar toph"
 #ensures that polybar.sh file runs so that polybar opens in the external monitor too. Uncomment if you want polybar on ext. monitor
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec_always --no-startup-id /usr/libexec/gsd-xsettings
+exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 #----------------------------------------------KEYBINDINGS-------------------------------------------------------------------------------------
 #brightness keybindings
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -18,6 +18,9 @@ bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select 
 bindsym $super+l exec --no-startup-id i3lock
 #keybinding for file manager : nautilus
 bindsym $super+e exec --no-startup-id nautilus
+bindsym $super+x exec --no-startup-id poweroff
+#tmux keybinding
+bindsym $super+t exec --no-startup-id ghostty -e "tmux new-session -s practice 'cd ~/practice && nvim index.html'"
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -144,7 +147,7 @@ bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
+#bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
@@ -198,5 +201,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
-#      status_command i3status
+ #     status_command i3status
+  #    tray_output primary
 #}
+
