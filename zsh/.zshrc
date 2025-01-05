@@ -8,7 +8,7 @@ fi
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
-
+alias cout='checkout'
 #alias@package-update
 alias upgrade='sudo apt upgrade -y'
 alias upg='sudo apt update && sudo apt upgrade -y'
@@ -24,6 +24,7 @@ alias ....='cd ../../../..'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
+alias tpractice='tmux new-session -s practice "cd ~/practice && nvim index.html"'
 
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
@@ -158,7 +159,6 @@ autoload -Uz compinit && compinit
 
 # Zinit replay
 zinit cdreplay -q
-
 
 
 
