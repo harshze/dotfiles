@@ -23,3 +23,5 @@ cp -r ~/.config/nvim/* ~/github/dotfiles/nvim
 # Copy script to dotfiles directory
 cp ~/pushconfig.sh ~/github/dotfiles/zsh/pushconfig.sh
 chmod +x ~/github/dotfiles/zsh/pushconfig.sh
+cp ~/pushconfigmax.sh ~/github/dotfiles/zsh/pushconfigmax.sh
+chmod +x ~/github/dotfiles/zsh/pushconfigmax.sh
