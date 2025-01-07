@@ -37,7 +37,6 @@ alias pushalacritty='cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/ala
 alias pushtmux='cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf'
 alias pushnvim='rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
-#testing pullzsh, delete it
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
