@@ -8,7 +8,7 @@ cp ~/.config/polybar/launch_polybar.sh ~/github/dotfiles/polybar/launch_polybar.
 cp ~/.zshrc ~/github/dotfiles/zsh/.zshrc
 
 # i3
-cp ~/.config/i3/config ~/github/dotfiles/i3/i3-config
+cp ~/.config/i3/config ~/github/dotfiles/i3/config
 
 # Alacritty
 cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/alacritty/alacritty.toml
