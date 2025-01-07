@@ -27,5 +27,6 @@ echo "Removing Neovim cache directory..."
 rm -rf ~/.cache/nvim
 
 echo "All Neovim configurations and state files removed."
-echo "finding nvim related stuff on the system"
+
+echo "----finding nvim related stuff on the system----"
 find ~ -type d -name '*nvim*'
