@@ -8,7 +8,7 @@ fi
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
-alias cout='checkout'
+
 #alias@package-update
 alias upgrade='sudo apt upgrade -y'
 alias upg='sudo apt update && sudo apt upgrade -y'
