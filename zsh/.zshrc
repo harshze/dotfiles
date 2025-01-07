@@ -37,10 +37,9 @@ alias pushalacritty='cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/ala
 alias pushtmux='cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf'
 alias pushnvim='rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
-#all of the above commands put together to push all configs in one command.
-alias pushconfig='cp ~/.config/polybar/config.ini ~/github/dotfiles/polybar/config.ini && cp ~/.config/polybar/launch_polybar.sh ~/github/dotfiles/polybar/launch_polybar.sh && cp ~/.zshrc ~/github/dotfiles/zsh/.zshrc && cp ~/.config/i3/config ~/github/dotfiles/i3/i3-config && cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/alacritty/alacritty.toml && cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf && rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
-#instead of copying each file one by one, this will copy the entire directory.
-alias pushconfigmax='rm -rf ~/github/dotfiles/polybar/* && cp -r ~/.config/polybar/* ~/github/dotfiles/polybar && rm -rf ~/github/dotfiles/zsh && mkdir -p ~/github/dotfiles/zsh && cp ~/.zshrc ~/github/dotfiles/zsh && rm -rf ~/github/dotfiles/i3/* && cp -r ~/.config/i3/* ~/github/dotfiles/i3 && rm -rf ~/github/dotfiles/alacritty/* && cp -r ~/.config/alacritty/* ~/github/dotfiles/alacritty && rm -rf ~/github/dotfiles/tmux/* && cp -r ~/.config/tmux/* ~/github/dotfiles/tmux && rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
+
+alias pushconfig='~/pushconfig.sh'
+alias pushconfigmax='~/pushconfigmax.sh'
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
