@@ -1,3 +1,4 @@
+#delete this comment
 #--------------------------------------------I3-STARTUP-EXEC-----------------------------------------------------------------------------------
 #turns on nightmode.
 exec_always --no-startup-id redshift -P -O 4600

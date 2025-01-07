@@ -2,7 +2,7 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
+#delete this comment
 #---------------------------------------------AlIAS---------------------------------------------------------------------------------------------
 #alias
 alias ls='ls --color'
@@ -37,6 +37,9 @@ alias pushalacritty='cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/ala
 alias pushtmux='cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf'
 alias pushnvim='rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
+#all of the above commands put together to push all configs in one command.
+alias pushconfig='cp ~/.config/polybar/config.ini ~/github/dotfiles/polybar/config.ini && cp ~/.config/polybar/launch_polybar.sh ~/github/dotfiles/polybar/launch_polybar.sh && cp ~/.zshrc ~/github/dotfiles/zsh/.zshrc && cp ~/.config/i3/config ~/github/dotfiles/i3/i3-config && cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/alacritty/alacritty.toml && cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf && rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
+
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
