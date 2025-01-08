@@ -89,7 +89,7 @@ cd() {
     fi
 }
 #-----------------------------------------------MISCELLANEOUS-----------------------------------------------------------------------------------
-#displays the PWD in place of alacritty in the activity bar.
+#displays the PWD in the activity bar of terminal.
 #update_title() {
  # if [[ "$PWD" == "$HOME" ]]; then
   #  print -Pn "\e]0;~\a"
