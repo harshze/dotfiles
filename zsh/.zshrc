@@ -30,6 +30,7 @@ alias tpractice='tmux new-session -s practice "cd ~/practice && nvim index.html"
 alias sound='pavucontrol'
 
 #alias to copy configs to ~/github/dotfiles
+alias pushexecutables='rm -rf ~/github/dotfiles/executables/* && cp -r ~/executables/* ~/github/dotfiles/executables'
 alias pushpolybar='cp ~/.config/polybar/config.ini ~/github/dotfiles/polybar/config.ini && cp ~/.config/polybar/launch_polybar.sh ~/github/dotfiles/polybar/launch_polybar.sh'
 alias pushzsh='cp ~/.zshrc ~/github/dotfiles/zsh/.zshrc'
 alias pushi3='cp ~/.config/i3/config ~/github/dotfiles/i3/config'
@@ -37,9 +38,17 @@ alias pushalacritty='cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/ala
 alias pushtmux='cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf'
 alias pushnvim='rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
+alias pushi3max='rm -rf ~/github/dotfiles/i3 && mkdir -p ~/github/dotfiles/i3 && cp -r ~/.config/i3/* ~/github/dotfiles/i3'
 
-alias pushconfig='~/pushconfig.sh'
-alias pushconfigmax='~/pushconfigmax.sh'
+alias alacrittymax
+alias tmuxmax
+alias pushnvimmax='rm -rf ~/github/dotfiles/nvim && mkdir -p ~/github/dotfiles/nvim && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
+
+#executables
+alias nvimreset='~/executables/clean_nvim.sh'
+alias pushconfig='~/executables/pushconfig.sh'
+alias pushconfigmax='~/executables/pushconfigmax.sh'
+
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
