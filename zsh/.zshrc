@@ -90,16 +90,16 @@ cd() {
 }
 #-----------------------------------------------MISCELLANEOUS-----------------------------------------------------------------------------------
 #displays the PWD in place of alacritty in the activity bar.
-update_title() {
-  if [[ "$PWD" == "$HOME" ]]; then
-    print -Pn "\e]0;~\a"
-  else
-    local dir="${PWD/#$HOME/~}"
-    print -Pn "\e]0;${dir}\a"
-  fi
-}
+#update_title() {
+ # if [[ "$PWD" == "$HOME" ]]; then
+  #  print -Pn "\e]0;~\a"
+  #else
+   #local dir="${PWD/#$HOME/~}"
+    #print -Pn "\e]0;${dir}\a"
+  #fi
+#}
 
-precmd() { update_title }
+#precmd() { update_title }
 
 #Export Zig bath, used for ghostty build
 export PATH=$PATH:~/Documents/zig-linux-x86_64-0.14.0-dev.2568+42dac40b3
