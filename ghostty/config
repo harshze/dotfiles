@@ -1,3 +1,4 @@
+#comment out if you want ghostty titlbar.
 gtk-titlebar = false
 
 theme = catppuccin-mocha
