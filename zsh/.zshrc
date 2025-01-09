@@ -24,30 +24,32 @@ alias ....='cd ../../../..'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
-alias tpractice='tmux new-session -s practice "cd ~/practice && nvim index.html"'
-
+alias tpractice='tmux new-session -s practice'
+alias tat='tmux a -t'
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 
 #alias to copy configs to ~/github/dotfiles
-alias pushexecutables='rm -rf ~/github/dotfiles/executables/* && cp -r ~/executables/* ~/github/dotfiles/executables'
+alias pushscripts='rm -rf ~/github/dotfiles/scripts/* && cp -r ~/scripts/* ~/github/dotfiles/scripts'
 alias pushpolybar='cp ~/.config/polybar/config.ini ~/github/dotfiles/polybar/config.ini && cp ~/.config/polybar/launch_polybar.sh ~/github/dotfiles/polybar/launch_polybar.sh'
 alias pushzsh='cp ~/.zshrc ~/github/dotfiles/zsh/.zshrc'
 alias pushi3='cp ~/.config/i3/config ~/github/dotfiles/i3/config'
 alias pushalacritty='cp ~/.config/alacritty/alacritty.toml ~/github/dotfiles/alacritty/alacritty.toml'
 alias pushtmux='cp ~/.config/tmux/tmux.conf ~/github/dotfiles/tmux/tmux.conf'
 alias pushnvim='rm -rf ~/github/dotfiles/nvim/* && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
+alias pushghostty='cp ~/.config/ghostty/config ~/github/dotfiles/ghostty/config'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
 alias pushi3max='rm -rf ~/github/dotfiles/i3 && mkdir -p ~/github/dotfiles/i3 && cp -r ~/.config/i3/* ~/github/dotfiles/i3'
-
+alias pushghosttymax
 alias alacrittymax
 alias tmuxmax
 alias pushnvimmax='rm -rf ~/github/dotfiles/nvim && mkdir -p ~/github/dotfiles/nvim && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 
-#executables
-alias nvimreset='~/executables/clean_nvim.sh'
-alias pushconfig='~/executables/pushconfig.sh'
-alias pushconfigmax='~/executables/pushconfigmax.sh'
+#scripts
+alias nvimreset='~/scripts/clean_nvim.sh'
+alias pushconfig='~/scripts/pushconfig.sh'
+alias pushconfigmax='~/scripts/pushconfigmax.sh'
+alias cleansystem='~/scripts/cleansystem.sh'
 
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
