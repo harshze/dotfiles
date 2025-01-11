@@ -1,4 +1,3 @@
-#delete this comment
 #--------------------------------------------I3-STARTUP-EXEC-----------------------------------------------------------------------------------
 #turns on nightmode.
 exec_always --no-startup-id redshift -P -O 4600
@@ -10,7 +9,8 @@ exec_always --no-startup-id bash -c "pkill polybar; polybar toph"
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 #hides titlebar of applications in split mode
-for_window [class="^.*"] border pixel 0 
+for_window [class="^.*"] border pixel 0
+#client.focused #859900 #859900 #fdf6e3 #859900
 #----------------------------------------------KEYBINDINGS-------------------------------------------------------------------------------------
 #brightness keybindings
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -23,7 +23,7 @@ bindsym $super+l exec --no-startup-id i3lock
 bindsym $super+e exec --no-startup-id nautilus
 bindsym $super+x exec --no-startup-id poweroff
 #tmux keybinding
-bindsym $super+t exec --no-startup-id ghostty -e "tmux new-session -s practice 'cd ~/practice && nvim index.html'"
+bindsym $super+t exec --no-startup-id ghostty -e "tmux new-session -s practice"
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 
