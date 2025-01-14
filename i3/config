@@ -18,9 +18,9 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 #screenshot keybinding with prt sc key. saves ss to ~/screenshots.
 bindsym Print exec NOW=$(date +%d-%b-%Y_%H-%M-%S) && maim --format png --select > ~/screenshots/screenshot_$NOW.png && xclip -selection clip -t image/png ~/screenshots/screenshot_$NOW.png
 #keybinding for screenlock
-bindsym $super+l exec --no-startup-id i3lock
+bindsym $super+l exec --no-startup-id i3lock -t -i ~/.config/i3/lockscreen.png --no-unlock-indicator
 #keybinding for file manager : nautilus
-bindsym $super+e exec --no-startup-id nautilus
+bindsym $super+e exec --no-startup-id nemo
 bindsym $super+x exec --no-startup-id poweroff
 #tmux keybinding
 bindsym $super+t exec --no-startup-id ghostty -e "tmux new-session -s practice"
