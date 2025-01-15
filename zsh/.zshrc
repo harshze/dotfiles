@@ -2,7 +2,9 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-#delete this comment
+#export ZSH="$HOME/.oh-my-zsh"
+#ZSH_THEME="robbyrussell"
+#source $ZSH/oh-my-zsh.sh
 #---------------------------------------------AlIAS---------------------------------------------------------------------------------------------
 #alias
 alias ls='ls --color'
@@ -15,6 +17,8 @@ alias upg='sudo apt update && sudo apt upgrade -y'
 alias up='sudo apt update && sudo apt upgrade -y'
 alias update='sudo apt update'
 
+alias p='python3'
+
 #alias@cd
 alias .='cd ..'
 alias ..='cd ../..'
@@ -26,6 +30,7 @@ alias t='tmux'
 alias tks='tmux kill-server'
 alias tpractice='tmux new-session -s practice'
 alias tat='tmux a -t'
+alias tsource='tmux source ~/.config/tmux/tmux.conf'
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 
@@ -41,8 +46,8 @@ alias pushghostty='cp ~/.config/ghostty/config ~/github/dotfiles/ghostty/config'
 alias pullzsh='cp ~/github/dotfiles/zsh/.zshrc ~/.zshrc'
 alias pushi3max='rm -rf ~/github/dotfiles/i3 && mkdir -p ~/github/dotfiles/i3 && cp -r ~/.config/i3/* ~/github/dotfiles/i3'
 alias pushghosttymax
-alias alacrittymax
-alias tmuxmax
+alias alacrittymax=
+alias pushtmuxmax='rm -rf ~/github/dotfiles/tmux && mkdir -p ~/github/dotfiles/tmux && cp -r ~/.config/tmux/* ~/github/dotfiles/tmux'
 alias pushnvimmax='rm -rf ~/github/dotfiles/nvim && mkdir -p ~/github/dotfiles/nvim && cp -r ~/.config/nvim/* ~/github/dotfiles/nvim'
 
 #scripts
@@ -123,7 +128,7 @@ fi
 # Source/Load Zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Load Powerlevel10k
+#Load Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -181,7 +186,6 @@ autoload -Uz compinit && compinit
 
 # Zinit replay
 zinit cdreplay -q
-
 
 
 
