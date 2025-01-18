@@ -48,7 +48,7 @@ alias nvimreset='~/scripts/clean_nvim.sh'
 alias pushconfig='~/scripts/pushconfig.sh'
 alias pushconfigmax='~/scripts/pushconfigmax.sh'
 alias cleansystem='~/scripts/cleansystem.sh'
-
+alias mad1='~/scripts/mad1.sh'
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
