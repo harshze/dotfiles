@@ -18,7 +18,7 @@ alias up='sudo apt update && sudo apt upgrade -y'
 alias update='sudo apt update'
 
 alias p='python3'
-
+alias lgit='lazygit'
 #alias@cd
 alias .='cd ..'
 alias ..='cd ../..'
