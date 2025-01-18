@@ -2,7 +2,7 @@
 
 # Remove Kickstart Neovim configuration folder
 
-rm -rf ~/.config/nvim
+rm -rf ~/.config/nvim/*
 
 # Remove Neovim plugin and state files
 echo "Removing Neovim plugin and state files..."

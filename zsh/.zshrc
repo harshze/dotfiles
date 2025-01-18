@@ -31,8 +31,14 @@ alias tks='tmux kill-server'
 alias tpractice='tmux new-session -s practice'
 alias tat='tmux a -t'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
+alias tfnw='tmuxifier new-window'
+alias tflw='tmuxifier load-window'
+alias tfns='tmuxifier new-session'
+alias tfls='tmuxifier load-session'
+
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
+alias volume='pavucontrol'
 
 #alias to copy configs to ~/github/dotfiles
 source ~/scripts/pushconfig
@@ -97,9 +103,11 @@ cd() {
 
 #Export Zig bath, used for ghostty build
 export PATH=$PATH:~/Documents/zig-linux-x86_64-0.14.0-dev.2568+42dac40b3
-
+export PATH="$HOME/.tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
+#export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
+export EDITOR=nvim 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-
 # Disable instant prompt (suppress the warning)
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
