@@ -36,7 +36,7 @@ alias tflw='tmuxifier load-window'
 alias tfns='tmuxifier new-session'
 alias tfls='tmuxifier load-session'
 
-source ~/scripts/tflayouts
+source ~/scripts/tflayouts-alias
 alias configgithub='~/scripts/githubpush.sh'
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
@@ -50,7 +50,7 @@ alias nvimreset='~/scripts/clean_nvim.sh'
 alias pushconfig='~/scripts/pushconfig.sh'
 alias pushconfigmax='~/scripts/pushconfigmax.sh'
 alias cleansystem='~/scripts/cleansystem.sh'
-alias mad1='~/scripts/mad1.sh'
+alias mad1session='~/scripts/mad1.sh'
 
 
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
