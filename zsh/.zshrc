@@ -36,6 +36,8 @@ alias tflw='tmuxifier load-window'
 alias tfns='tmuxifier new-session'
 alias tfls='tmuxifier load-session'
 
+source ~/scripts/tflayouts
+
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
@@ -49,6 +51,8 @@ alias pushconfig='~/scripts/pushconfig.sh'
 alias pushconfigmax='~/scripts/pushconfigmax.sh'
 alias cleansystem='~/scripts/cleansystem.sh'
 alias mad1='~/scripts/mad1.sh'
+
+
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist

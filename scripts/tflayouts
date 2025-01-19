@@ -1,0 +1,12 @@
+alias tmuxconf='tmuxifier load-window tmux'
+alias i3conf='tmuxifier load-window i3'
+alias nvimconf='tmuxifier load-window nvim'
+alias polybarconf='tmuxifier load-window polybar'
+alias alacrittyconf='tmuxifier load-window alacritty'
+alias ghosttyconf='tmuxifier load-window ghostty'
+alias zshconf='tmuxifier load-window zsh'
+alias scripts='tmuxifier load-window scripts'
+alias tflayouts='tmuxifier load-window tflayouts'
+
+alias config='tmuxifier load-session config'
+
