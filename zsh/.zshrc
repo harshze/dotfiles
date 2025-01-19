@@ -37,7 +37,7 @@ alias tfns='tmuxifier new-session'
 alias tfls='tmuxifier load-session'
 
 source ~/scripts/tflayouts
-
+alias configgithub='~/scripts/githubpush.sh'
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
@@ -110,7 +110,7 @@ export PATH=$PATH:~/Documents/zig-linux-x86_64-0.14.0-dev.2568+42dac40b3
 export PATH="$HOME/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
 #export TMUXIFIER_LAYOUT_PATH="$HOME/.tmux-layouts"
-export EDITOR=nvim 
+export EDITOR=nvim
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 # Disable instant prompt (suppress the warning)
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
