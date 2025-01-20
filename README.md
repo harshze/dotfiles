@@ -30,10 +30,11 @@ git clone https://github.com/harshze/dotfiles.git ~/dotfiles
 cd ~/dotfiles
   ```
 
-2️⃣ Run the Setup Script
-bash setup.sh
+### 2️⃣ Run the Setup Script
+```bash setup.sh`
+  ```
 
-3️⃣ Follow the Prompts
+### 3️⃣ Follow the Prompts
 The script will ask you to select your Linux distribution:
 
 🐧 Ubuntu/Debian
@@ -49,10 +50,12 @@ Reload i3 to apply configurations.
 
 🎯 Uninstalling
 If you want to remove a specific configuration, use:
+  ```
 stow -D <folder_name>
-
+```
 For example, to remove the i3 configuration:
-stow -D i3
+```stow -D i3 
+```
 </details>
 
 <details> <summary><strong>🎯 Only Use a Specific Config</strong> (Click to expand)</summary>
