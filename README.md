@@ -34,19 +34,22 @@ cd ~/dotfiles
 ```bash
 bash setup.sh
  ```
+---
+
 ### 3️⃣ Follow the Prompts
 The script will ask you to select your Linux distribution:
 
-🐧 Ubuntu/Debian
-🏴‍☠️ Arch/Manjaro
-🔵 Fedora
-🟢 OpenSUSE
+- 🐧 Ubuntu/Debian
+- 🏴‍☠️ Arch/Manjaro
+- 🔵 Fedora
+- 🟢 OpenSUSE
+
 Once selected, the script will:
 
-Update and upgrade your system.
-Install essential tools (i3, Polybar, Vim, Neovim, Rofi, etc.).
-Use GNU Stow to manage your dotfiles and create symlinks.
-Reload i3 to apply configurations.
+- Update and upgrade your system.
+- Install essential tools (i3, Polybar, Vim, Neovim, Rofi, etc.).
+- Use GNU Stow to manage your dotfiles and create symlinks.
+- Reload i3 to apply configurations.
 
 🎯 Uninstalling
 If you want to remove a specific configuration, use:
@@ -59,4 +62,5 @@ stow -D i3
  ```
 </details>
 
+---
 <details> <summary><strong>🎯 Only Use a Specific Config</strong> (Click to expand)</summary>
