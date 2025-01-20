@@ -42,16 +42,10 @@ alias configgithub='~/scripts/githubpush.sh'
 alias sound='pavucontrol'
 alias volume='pavucontrol'
 
-#alias to copy configs to ~/github/dotfiles
-source ~/scripts/pushconfig
-
 #scripts
 alias nvimreset='~/scripts/clean_nvim.sh'
-alias pushconfig='~/scripts/pushconfig.sh'
-alias pushconfigmax='~/scripts/pushconfigmax.sh'
 alias cleansystem='~/scripts/cleansystem.sh'
 alias mad1session='~/scripts/mad1.sh'
-
 
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
