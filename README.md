@@ -17,7 +17,19 @@ This repository contains my personal dotfiles and an automated setup script to c
 ## 📂 Dotfile Structure
 Each program's configuration is stored in a separate folder:'
 
-dotfiles/ │── alacritty/ │ └── .config/alacritty/ │── i3/ │ └── .config/i3/ │── nvim/ │ └── .config/nvim/ │── tmux/ │ └── .config/tmux/ │── zsh/ │ └── .zshrc │── vim/ │ └── .vimrc │── polybar/ │ └── .config/polybar/ 
+dotfiles/
+│── alacritty/
+│   └── .config/alacritty/
+│── i3/
+│   └── .config/i3/
+│── nvim/
+│   └── .config/nvim/
+│── tmux/
+│   └── .config/tmux/
+│── zsh/
+│   └── .zshrc
+│── polybar/
+│   └── .config/polybar/
 
 ## 🛠️ Setup Instructions
 
