@@ -8,5 +8,5 @@ alias zshconf='tmuxifier load-window zsh'
 alias scripts='tmuxifier load-window scripts'
 alias tflayouts='tmuxifier load-window tflayouts'
 
-alias config='tmuxifier load-session config'
+alias configsession='tmuxifier load-session config'
 
