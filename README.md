@@ -31,9 +31,9 @@ cd ~/dotfiles
   ```
 
 ### 2️⃣ Run the Setup Script
-```bash setup.sh`
-  ```
-
+```bash
+bash setup.sh
+ ```
 ### 3️⃣ Follow the Prompts
 The script will ask you to select your Linux distribution:
 
@@ -50,12 +50,13 @@ Reload i3 to apply configurations.
 
 🎯 Uninstalling
 If you want to remove a specific configuration, use:
-  ```
+```bash
 stow -D <folder_name>
-```
+ ```
 For example, to remove the i3 configuration:
-```stow -D i3 
-```
+```bash
+stow -D i3 
+ ```
 </details>
 
 <details> <summary><strong>🎯 Only Use a Specific Config</strong> (Click to expand)</summary>
