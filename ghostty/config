@@ -1,7 +1,7 @@
 #comment out if you want ghostty titlbar.
 gtk-titlebar = false
 
-theme = catppuccin-mocha
+#theme = catppuccin-mocha
 font-size = 12
 background-blur-radius = 20
 mouse-hide-while-typing = true
