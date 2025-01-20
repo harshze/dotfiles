@@ -37,3 +37,15 @@ eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappea
 # Additional utilities
 echo "Installing additional utilities..."
 eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf"
+
+# Create necessary directories first
+mkdir -p ~/.config/{i3,alacritty,nvim,tmux,polybar}
+
+# Create symlinks
+ln -sf ~/dotfiles/i3/.config/i3/* ~/.config/i3/
+ln -sf ~/dotfiles/alacritty/.config/alacritty/* ~/.config/alacritty/
+ln -sf ~/dotfiles/nvim/.config/nvim/* ~/.config/nvim/
+ln -sf ~/dotfiles/tmux/.config/tmux/* ~/.config/tmux/
+ln -sf ~/dotfiles/polybar/.config/polybar/* ~/.config/polybar/
+ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
