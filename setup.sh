@@ -38,7 +38,9 @@ eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappea
 echo "Installing additional utilities..."
 eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf"
 
-echo "work in progress on the repository, stow manually. Will be fixed soon"
+echo "-----------------------------------------------------------------------"
+echo "work in progress on the repository, stow manually. Will be fixed soon!"
+echo "-----------------------------------------------------------------------"
 # Create necessary directories first
 #mkdir -p ~/.config/{i3,alacritty,nvim,tmux,polybar}
 
