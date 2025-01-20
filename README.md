@@ -28,6 +28,7 @@ dotfiles/ │── alacritty/ │ └── .config/alacritty/ │── i3/ �
 ```bash
 git clone https://github.com/harshze/dotfiles.git ~/dotfiles
 cd ~/dotfiles
+  ```
 
 2️⃣ Run the Setup Script
 bash setup.sh
