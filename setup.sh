@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Backup directory
-BACKUP_DIR=~/config_backup_$(date +%Y%m%d_%H%M%S)
+BACKUP_DIR=~/config_backup
 mkdir -p "$BACKUP_DIR"
 
 # Detect Linux Distro
