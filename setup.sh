@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Backup directory
+BACKUP_DIR=~/config_backup_$(date +%Y%m%d_%H%M%S)
+mkdir -p "$BACKUP_DIR"
+
 # Detect Linux Distro
 echo "Which Linux distribution are you using?"
 echo "1) Ubuntu/Debian"
