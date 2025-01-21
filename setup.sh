@@ -38,17 +38,28 @@ eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappea
 echo "Installing additional utilities..."
 eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf"
 
-echo "-----------------------------------------------------------------------"
-echo "work in progress on the repository, stow manually. Will be fixed soon!"
-echo "-----------------------------------------------------------------------"
-# Create necessary directories first
-#mkdir -p ~/.config/{i3,alacritty,nvim,tmux,polybar}
+# Backup .zshrc separately since it's in ~/
+if [[ -f ~/.zshrc ]]; then
+  mv ~/.zshrc "$BACKUP_DIR/"
+fi
 
-# Create symlinks
-#ln -sf ~/dotfiles/i3/.config/i3/* ~/.config/i3/
-#ln -sf ~/dotfiles/alacritty/.config/alacritty/* ~/.config/alacritty/
-#ln -sf ~/dotfiles/nvim/.config/nvim/* ~/.config/nvim/
-#ln -sf ~/dotfiles/tmux/.config/tmux/* ~/.config/tmux/
-#ln -sf ~/dotfiles/polybar/.config/polybar/* ~/.config/polybar/
-#ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
-#ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
+# Backup existing configurations if they exist
+echo "Backing up existing config files to $BACKUP_DIR..."
+for config in nvim alacritty ghostty i3 polybar tmux; do
+  if [[ -d ~/.config/$config || -f ~/.config/$config ]]; then
+    mv ~/.config/$config "$BACKUP_DIR/"
+  fi
+done
+
+# Symlink new configs
+echo "Creating symlinks for dotfiles..."
+ln -sf ~/dotfiles/nvim ~/.config/
+ln -sf ~/dotfiles/alacritty ~/.config/
+ln -sf ~/dotfiles/ghostty ~/.config/
+ln -sf ~/dotfiles/i3 ~/.config/
+ln -sf ~/dotfiles/polybar ~/.config/
+ln -sf ~/dotfiles/tmux ~/.config/
+ln -sf ~/dotfiles/zsh/.zshrc ~/
+echo "-----------------------------------------------------------------------"
+echo "Dotfiles setup completed. Your previous configs are backed up at: $BACKUP_DIR"
+echo "-----------------------------------------------------------------------"
