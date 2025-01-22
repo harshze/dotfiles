@@ -19,17 +19,12 @@ Each program's configuration is stored in a separate folder:'
 ```bash
 dotfiles/
 │── alacritty/
-│   └── .config/alacritty/
 │── i3/
-│   └── .config/i3/
 │── nvim/
-│   └── .config/nvim/
 │── tmux/
-│   └── .config/tmux/
 │── zsh/
 │   └── .zshrc
 │── polybar/
-│   └── .config/polybar/
  ```
 
 ## 🛠️ Setup Instructions
