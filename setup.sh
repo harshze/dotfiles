@@ -30,35 +30,26 @@ elif [[ "$os_choice" == "4" ]]; then
   UPDATE_CMD="sudo zypper refresh && sudo zypper update -y"
 else
   echo "❌ Unsupported OS. Exiting..."
-  exit 1 # Exit immediately if an unsupported OS is chosen
+  exit 1
 fi
 
 # Update and upgrade system
 echo "============================================"
 echo "🔄 Updating and upgrading the system..."
 echo "============================================"
-if ! eval "$UPDATE_CMD"; then
-  echo "❌ System update failed. Exiting..."
-  exit 1
-fi
+eval "$UPDATE_CMD" || echo "⚠️ System update failed, continuing..."
 
 # Install essential packages
 echo "============================================"
 echo "📦 Installing essential packages..."
 echo "============================================"
-if ! eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip"; then
-  echo "❌ Package installation failed. Exiting..."
-  exit 1
-fi
+eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip" || echo "⚠️ Some essential packages failed to install, continuing..."
 
 # Additional utilities
 echo "============================================"
 echo "🛠️ Installing additional utilities..."
 echo "============================================"
-if ! eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift"; then
-  echo "❌ Additional package installation failed. Exiting..."
-  exit 1
-fi
+eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift" || echo "⚠️ Some additional utilities failed to install, continuing..."
 
 # Backup .zshrc separately since it's in ~/
 if [[ -f ~/.zshrc ]]; then
@@ -89,10 +80,8 @@ ln -sf ~/dotfiles/polybar ~/.config/
 ln -sf ~/dotfiles/tmux ~/.config/
 ln -sf ~/dotfiles/zsh/.zshrc ~/
 
-# If everything above runs without exiting, print success message
-if [[ $? -eq 0 ]]; then
-  echo "============================================"
-  echo "✅ Dotfiles setup completed!"
-  echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
-  echo "============================================"
-fi
+# Final message
+echo "============================================"
+echo "✅ Dotfiles setup completed!"
+echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
+echo "============================================"
