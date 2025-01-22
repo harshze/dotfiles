@@ -3,15 +3,17 @@
 # Backup directory
 BACKUP_DIR=~/config_backup
 mkdir -p "$BACKUP_DIR"
-mkdir -p ~/screenshots #when using I3 WM, this will store the screenshots you take.
+mkdir -p ~/screenshots # When using i3 WM, this will store screenshots you take.
 
 # Detect Linux Distro
-echo "Which Linux distribution are you using?"
+echo "============================================"
+echo "🖥️  Which Linux distribution are you using?"
+echo "============================================"
 echo "1) Ubuntu/Debian"
 echo "2) Arch/Manjaro"
 echo "3) Fedora"
 echo "4) OpenSUSE"
-read -p "Enter the number corresponding to your OS: " os_choice
+read -p "📌 Enter the number corresponding to your OS: " os_choice
 
 # Package Manager Selection
 if [[ "$os_choice" == "1" ]]; then
@@ -27,37 +29,58 @@ elif [[ "$os_choice" == "4" ]]; then
   PKG_MANAGER="sudo zypper install -y"
   UPDATE_CMD="sudo zypper refresh && sudo zypper update -y"
 else
-  echo "Unsupported OS. Exiting..."
-  exit 1
+  echo "❌ Unsupported OS. Exiting..."
+  exit 1 # Exit immediately if an unsupported OS is chosen
 fi
 
 # Update and upgrade system
-echo "Updating and upgrading the system..."
-eval "$UPDATE_CMD"
+echo "============================================"
+echo "🔄 Updating and upgrading the system..."
+echo "============================================"
+if ! eval "$UPDATE_CMD"; then
+  echo "❌ System update failed. Exiting..."
+  exit 1
+fi
 
 # Install essential packages
-echo "Installing essential packages..."
-eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip"
+echo "============================================"
+echo "📦 Installing essential packages..."
+echo "============================================"
+if ! eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip"; then
+  echo "❌ Package installation failed. Exiting..."
+  exit 1
+fi
 
 # Additional utilities
-echo "Installing additional utilities..."
-eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift"
+echo "============================================"
+echo "🛠️ Installing additional utilities..."
+echo "============================================"
+if ! eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift"; then
+  echo "❌ Additional package installation failed. Exiting..."
+  exit 1
+fi
 
 # Backup .zshrc separately since it's in ~/
 if [[ -f ~/.zshrc ]]; then
+  echo "🗄️ Backing up ~/.zshrc to $BACKUP_DIR..."
   mv ~/.zshrc "$BACKUP_DIR/"
 fi
 
 # Backup existing configurations if they exist
-echo "Backing up existing config files to $BACKUP_DIR..."
+echo "============================================"
+echo "📂 Backing up existing config files to $BACKUP_DIR..."
+echo "============================================"
 for config in nvim alacritty ghostty i3 polybar tmux; do
   if [[ -d ~/.config/$config || -f ~/.config/$config ]]; then
+    echo "📦 Backing up ~/.config/$config"
     mv ~/.config/$config "$BACKUP_DIR/"
   fi
 done
 
 # Symlink new configs
-echo "Creating symlinks for dotfiles..."
+echo "============================================"
+echo "🔗 Creating symlinks for dotfiles..."
+echo "============================================"
 ln -sf ~/dotfiles/nvim ~/.config/
 ln -sf ~/dotfiles/alacritty ~/.config/
 ln -sf ~/dotfiles/ghostty ~/.config/
@@ -65,7 +88,11 @@ ln -sf ~/dotfiles/i3 ~/.config/
 ln -sf ~/dotfiles/polybar ~/.config/
 ln -sf ~/dotfiles/tmux ~/.config/
 ln -sf ~/dotfiles/zsh/.zshrc ~/
-echo "-----------------------------------------------------------------------"
-echo "✅ Dotfiles setup completed! ✅"
-echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
-echo "-----------------------------------------------------------------------"
+
+# If everything above runs without exiting, print success message
+if [[ $? -eq 0 ]]; then
+  echo "============================================"
+  echo "✅ Dotfiles setup completed!"
+  echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
+  echo "============================================"
+fi
