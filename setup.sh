@@ -3,6 +3,7 @@
 # Backup directory
 BACKUP_DIR=~/config_backup
 mkdir -p "$BACKUP_DIR"
+mkdir -p "~/screenshots" #when using I3 WM, this will store the screenshots you take.
 
 # Detect Linux Distro
 echo "Which Linux distribution are you using?"
