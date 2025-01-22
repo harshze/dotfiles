@@ -1,0 +1,3 @@
+alias configgithub='cd ~/dotfiles/ && ~/dotfiles/scripts/githubpush.sh'
+alias push='~/dotfiles/scripts/githubpush.sh'
+alias pull='git fetch && git pull'
