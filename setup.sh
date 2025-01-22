@@ -1,13 +1,18 @@
 #!/bin/bash
 
+# Flags to track which parts failed
+UPDATE_FAILED=true
+ESSENTIALS_FAILED=true
+UTILITIES_FAILED=true
+
 # Backup directory
 BACKUP_DIR=~/config_backup
 mkdir -p "$BACKUP_DIR"
-mkdir -p ~/screenshots # When using i3 WM, this will store screenshots you take.
+mkdir -p ~/screenshots # When using i3 WM, this will store the screenshots you take.
 
 # Detect Linux Distro
 echo "============================================"
-echo "🖥️  Which Linux distribution are you using?"
+echo "🖥️   Which Linux distribution are you using?"
 echo "============================================"
 echo "1) Ubuntu/Debian"
 echo "2) Arch/Manjaro"
@@ -29,7 +34,7 @@ elif [[ "$os_choice" == "4" ]]; then
   PKG_MANAGER="sudo zypper install -y"
   UPDATE_CMD="sudo zypper refresh && sudo zypper update -y"
 else
-  echo "❌ Unsupported OS. Exiting..."
+  echo "❌ Invalid selection. Please run the script again and select a valid OS."
   exit 1
 fi
 
@@ -37,30 +42,55 @@ fi
 echo "============================================"
 echo "🔄 Updating and upgrading the system..."
 echo "============================================"
-eval "$UPDATE_CMD" || echo "⚠️ System update failed, continuing..."
+if eval "$UPDATE_CMD"; then
+  UPDATE_FAILED=false
+else
+  echo "⚠️  System update failed."
+  read -p "❓ Do you want to continue with dotfiles setup anyway? (y/n): " choice
+  if [[ "$choice" != "y" ]]; then
+    echo "🚫 Setup aborted."
+    exit 1
+  fi
+fi
 
 # Install essential packages
 echo "============================================"
 echo "📦 Installing essential packages..."
 echo "============================================"
-eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip" || echo "⚠️ Some essential packages failed to install, continuing..."
+if eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappearance nitrogen x11-utils xautolock polybar pavucontrol xdotool rofi picom flameshot unzip"; then
+  ESSENTIALS_FAILED=false
+else
+  echo "⚠️  Some essential packages failed to install."
+  read -p "❓ Do you want to continue with dotfiles setup anyway? (y/n): " choice
+  if [[ "$choice" != "y" ]]; then
+    echo "🚫 Setup aborted."
+    exit 1
+  fi
+fi
 
-# Additional utilities
+# Install additional utilities
 echo "============================================"
-echo "🛠️ Installing additional utilities..."
+echo "🛠️  Installing additional utilities..."
 echo "============================================"
-eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift" || echo "⚠️ Some additional utilities failed to install, continuing..."
+if eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift"; then
+  UTILITIES_FAILED=false
+else
+  echo "⚠️  Some additional utilities failed to install."
+  read -p "❓ Do you want to continue with dotfiles setup anyway? (y/n): " choice
+  if [[ "$choice" != "y" ]]; then
+    echo "🚫 Setup aborted."
+    exit 1
+  fi
+fi
 
 # Backup .zshrc separately since it's in ~/
 if [[ -f ~/.zshrc ]]; then
-  echo "🗄️ Backing up ~/.zshrc to $BACKUP_DIR..."
+  echo "🗄️  Backing up ~/.zshrc to $BACKUP_DIR..."
   mv ~/.zshrc "$BACKUP_DIR/"
 fi
 
 # Backup existing configurations if they exist
-echo "============================================"
 echo "📂 Backing up existing config files to $BACKUP_DIR..."
-echo "============================================"
 for config in nvim alacritty ghostty i3 polybar tmux; do
   if [[ -d ~/.config/$config || -f ~/.config/$config ]]; then
     echo "📦 Backing up ~/.config/$config"
@@ -69,9 +99,7 @@ for config in nvim alacritty ghostty i3 polybar tmux; do
 done
 
 # Symlink new configs
-echo "============================================"
 echo "🔗 Creating symlinks for dotfiles..."
-echo "============================================"
 ln -sf ~/dotfiles/nvim ~/.config/
 ln -sf ~/dotfiles/alacritty ~/.config/
 ln -sf ~/dotfiles/ghostty ~/.config/
@@ -80,8 +108,17 @@ ln -sf ~/dotfiles/polybar ~/.config/
 ln -sf ~/dotfiles/tmux ~/.config/
 ln -sf ~/dotfiles/zsh/.zshrc ~/
 
-# Final message
-echo "============================================"
-echo "✅ Dotfiles setup completed!"
-echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
-echo "============================================"
+# Determine the final message based on success/failure
+if [[ "$UPDATE_FAILED" == true && "$ESSENTIALS_FAILED" == true && "$UTILITIES_FAILED" == true ]]; then
+  echo "============================================"
+  echo "⚠️  Dotfiles setup completed with some issues."
+  echo "🗂️  Your previous configs are backed up at: $BACKUP_DIR"
+  echo "-----Raise issues if you face any problems https://github.com/harshze/dotfiles -----"
+  echo "============================================"
+else
+  echo "============================================"
+  echo "✅ Dotfiles setup completed successfully!"
+  echo "🗂️  Your previous configs are backed up at: $BACKUP_DIR"
+  echo "-----Raise issues if you face any problems https://github.com/harshze/dotfiles -----"
+  echo "============================================"
+fi
