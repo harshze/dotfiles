@@ -66,5 +66,6 @@ ln -sf ~/dotfiles/polybar ~/.config/
 ln -sf ~/dotfiles/tmux ~/.config/
 ln -sf ~/dotfiles/zsh/.zshrc ~/
 echo "-----------------------------------------------------------------------"
-echo "Dotfiles setup completed. Your previous configs are backed up at: $BACKUP_DIR"
+echo "✅ Dotfiles setup completed! ✅"
+echo "🗂️ Your previous configs are backed up at: $BACKUP_DIR"
 echo "-----------------------------------------------------------------------"
