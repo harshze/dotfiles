@@ -37,7 +37,10 @@ alias tfns='tmuxifier new-session'
 alias tfls='tmuxifier load-session'
 
 source ~/scripts/tflayouts-alias
-alias configgithub='cd ~/dotfiles/ && scripts/githubpush.sh'
+alias configgithub='cd ~/dotfiles/ && ~/dotfiles/scripts/githubpush.sh'
+alias push='~/dotfiles/scripts/githubpush.sh'
+alias pull='git fetch && git pull'
+
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
