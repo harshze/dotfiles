@@ -41,7 +41,7 @@ eval "$PKG_MANAGER git wget curl i3 i3blocks i3status feh dmenu vim tmux lxappea
 
 # Additional utilities
 echo "Installing additional utilities..."
-eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf"
+eval "$PKG_MANAGER zsh neovim python3-pip alacritty ripgrep fzf redshift"
 
 # Backup .zshrc separately since it's in ~/
 if [[ -f ~/.zshrc ]]; then
