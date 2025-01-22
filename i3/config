@@ -1,7 +1,7 @@
 #--------------------------------------------I3-STARTUP-EXEC-----------------------------------------------------------------------------------
 #turns on nightmode.
 exec_always --no-startup-id redshift -P -O 4600
-#adjusts the correct external monitor resolution.
+#adjusts the correct external monitor resolution. Change it according to your resolution.
 exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1366x768 --rate 60.00
 #starts fresh polybar and kills the existing one while refreshing the config file so that two polybars are not created. 
 exec_always --no-startup-id bash -c "pkill polybar; polybar toph"
