@@ -41,7 +41,7 @@ alias configgithub='~/scripts/githubpush.sh'
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
-
+alias gpt='tgpt'
 #scripts
 alias nvimreset='~/scripts/clean_nvim.sh'
 alias cleansystem='~/scripts/cleansystem.sh'
