@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ~/dotfiles || exit 1
-
 read -rp "Enter commit message: " commit_msg
 
 git add .
