@@ -110,15 +110,15 @@ ln -sf ~/dotfiles/zsh/.zshrc ~/
 
 # Determine the final message based on success/failure
 if [[ "$UPDATE_FAILED" == true && "$ESSENTIALS_FAILED" == true && "$UTILITIES_FAILED" == true ]]; then
-  echo "============================================"
+  echo "========================================================================================================"
   echo "⚠️  Dotfiles setup completed with some issues."
   echo "🗂️  Your previous configs are backed up at: $BACKUP_DIR"
-  echo "-----Raise issues if you face any problems https://github.com/harshze/dotfiles -----"
-  echo "============================================"
+  echo "-----Raise issues on github repo if you face any problems https://github.com/harshze/dotfiles -----"
+  echo "========================================================================================================"
 else
-  echo "============================================"
+  echo "========================================================================================================"
   echo "✅ Dotfiles setup completed successfully!"
   echo "🗂️  Your previous configs are backed up at: $BACKUP_DIR"
-  echo "-----Raise issues if you face any problems https://github.com/harshze/dotfiles -----"
-  echo "============================================"
+  echo "-----Raise issues on github repo if you face any problems https://github.com/harshze/dotfiles -----"
+  echo "========================================================================================================"
 fi
