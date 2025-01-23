@@ -71,9 +71,6 @@ stow -D i3
 </details>
 
 ---
-<details> <summary><strong>🎯 Only Use a Specific Config</strong> (Click to expand)</summary>
-</details>
-
 ## Specific Configurations
 
 ### i3 Window Manager
