@@ -28,17 +28,11 @@ alias ....='cd ../../../..'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
-alias tpractice='tmux new-session -s practice'
-alias tat='tmux a -t'
+alias tat='tmux attach-session'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
-alias tfnw='tmuxifier new-window'
-alias tflw='tmuxifier load-window'
-alias tfns='tmuxifier new-session'
-alias tfls='tmuxifier load-session'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
-
 
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'

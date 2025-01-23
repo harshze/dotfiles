@@ -1,3 +1,9 @@
+
+alias tfnw='tmuxifier new-window'
+alias tflw='tmuxifier load-window'
+alias tfns='tmuxifier new-session'
+alias tfls='tmuxifier load-session'
+
 alias tmuxconf='tmuxifier load-window tmux'
 alias i3conf='tmuxifier load-window i3'
 alias nvimconf='tmuxifier load-window nvim'
@@ -9,4 +15,8 @@ alias scripts='tmuxifier load-window scripts'
 alias tflayouts='tmuxifier load-window tflayouts'
 
 alias configsession='tmuxifier load-session config'
+alias scsession='tfls sc'
+alias mad1session='tfls mad1'
+alias mad2session='tfls mad2'
+
 
