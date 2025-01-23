@@ -53,7 +53,7 @@ Once selected, the script will:
 
 - Update and upgrade your system.
 - Install essential tools (i3, Polybar, Vim, Neovim, Rofi, etc.).
-- Use GNU Stow to manage your dotfiles and create symlinks.
+- Create symlinks to manage your dotfiles.
 - Reload i3 to apply configurations.
 
 🎯 Uninstalling
