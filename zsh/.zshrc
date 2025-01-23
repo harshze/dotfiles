@@ -10,7 +10,7 @@ fi
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
-
+alias vmlogin='ssh 23f3000625@se2001.ds.study.iitm.ac.in'
 #alias@package-update
 alias upgrade='sudo apt upgrade -y'
 alias upg='sudo apt update && sudo apt upgrade -y'
