@@ -10,7 +10,6 @@ fi
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
-alias vmlogin='ssh 23f3000625@se2001.ds.study.iitm.ac.in'
 #alias@package-update
 alias upgrade='sudo apt upgrade -y'
 alias upg='sudo apt update && sudo apt upgrade -y'
@@ -33,7 +32,7 @@ alias tsource='tmux source ~/.config/tmux/tmux.conf'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
-
+source ~/dotfiles/zsh/sc
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
