@@ -66,7 +66,7 @@ For example, to remove the i3 configuration:
 stow -D i3 
  ```
 ---
-## Specific Configurations
+## References
 
 ### i3 Window Manager
 i3 is a tiling window manager that's highly customizable and efficient.
