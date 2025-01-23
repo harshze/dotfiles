@@ -7,7 +7,6 @@ This repository contains my personal dotfiles and an automated setup script to c
 - [Dotfile Structure](#-dotfile-structure)
 - [Setup Instructions](#️-setup-instructions)
 - [Tool References](#-tool-references)
-- [License](#-license)
 
 ## ✨ Features
 
