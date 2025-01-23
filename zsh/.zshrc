@@ -33,6 +33,7 @@ alias tsource='tmux source ~/.config/tmux/tmux.conf'
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
 source ~/dotfiles/zsh/sc
+
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
 alias volume='pavucontrol'
