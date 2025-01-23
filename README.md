@@ -2,14 +2,6 @@
 
 This repository contains my personal dotfiles and an automated setup script to configure a new Linux system effortlessly. With just **one command**, you can install essential tools, set up configurations, and get your workflow running smoothly.
 
-## 📋 Table of Contents
-- [Features](#-features)
-- [Dotfile Structure](#-dotfile-structure)
-- [Setup Instructions](#️-setup-instructions)
-- [Tool References](#-tool-references)
-
-## ✨ Features
-
 - 🏗️ **Automated installation** for Ubuntu, Arch, Fedora, and OpenSUSE.
 - 🔗 **Uses GNU Stow** for easy dotfile management.
 - 🎨 **Configures i3, Polybar, Neovim, and more**.
@@ -68,7 +60,7 @@ For example, to remove the i3 configuration:
 stow -D i3 
  ```
 ---
-## 🔗 Tool References
+## 🔗 Learn More
 | Tool | Description | Config Location | Key Features | Official Repo |
 |------|-------------|-----------------|--------------|---------------|
 | i3 | Tiling window manager that's highly customizable and efficient | `~/.config/i3/` | Tiling layout, keyboard-centric control, multi-monitor support | [i3wm on GitHub](https://github.com/i3/i3) |
