@@ -11,6 +11,10 @@ exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 #hides titlebar of applications in split mode
 for_window [class="^.*"] border pixel 0
 #client.focused #859900 #859900 #fdf6e3 #859900
+#rjekker/i3-battery-popup tool. Install from github to use it.  https://github.com/rjekker/i3-battery-popup
+exec --no-startup-id i3-battery-popup -n -L 20
+for_window [title="Battery Warning"] sticky enable
+
 #----------------------------------------------KEYBINDINGS-------------------------------------------------------------------------------------
 #brightness keybindings
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
