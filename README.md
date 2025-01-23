@@ -72,3 +72,50 @@ stow -D i3
 
 ---
 <details> <summary><strong>🎯 Only Use a Specific Config</strong> (Click to expand)</summary>
+</details>
+
+## Specific Configurations
+
+### i3 Window Manager
+i3 is a tiling window manager that's highly customizable and efficient.
+- **Config location**: `~/.config/i3/config`
+- **Key features**: Tiling layout, keyboard-centric control, multi-monitor support
+- **Official repo**: [i3wm on GitHub](https://github.com/i3/i3)
+
+### LazyVim (Neovim Configuration)
+LazyVim is a Neovim configuration that provides a rich set of features out of the box.
+- **Config location**: `~/.config/nvim`
+- **Key features**: Lazy-loading plugins, built-in LSP support, sleek UI
+- **Official repo**: [LazyVim on GitHub](https://github.com/LazyVim/LazyVim)
+
+### tmux
+tmux is a terminal multiplexer that allows you to manage multiple terminal sessions within a single window.
+- **Config location**: `~/.tmux.conf`
+- **Key features**: Session management, pane splitting, customizable status bar
+- **Official repo**: [tmux on GitHub](https://github.com/tmux/tmux)
+
+### Polybar
+Polybar is a highly customizable status bar for your desktop environment.
+- **Config location**: `~/.config/polybar/config`
+- **Key features**: Modular design, extensive customization options, multi-monitor support
+- **Official repo**: [Polybar on GitHub](https://github.com/polybar/polybar)
+
+### Alacritty
+Alacritty is a fast, cross-platform terminal emulator focused on performance and simplicity.
+- **Config location**: `~/.config/alacritty/alacritty.yml`
+- **Key features**: GPU-accelerated rendering, minimal resource usage, extensive configuration options
+- **Official repo**: [Alacritty on GitHub](https://github.com/alacritty/alacritty)
+
+### Zsh (with Oh My Zsh)
+Zsh is a powerful shell with many features, and Oh My Zsh provides additional customization options.
+- **Config location**: `~/.zshrc`
+- **Key features**: Advanced command-line completion, plugins, themes
+- **Official repo**: [Oh My Zsh on GitHub](https://github.com/ohmyzsh/ohmyzsh)
+
+### Ghostty
+Ghostty is a modern, GPU-accelerated terminal emulator with a focus on performance and customizability.
+- **Config location**: `~/.config/ghostty/config`
+- **Key features**: GPU acceleration, native UI, Lua configuration, built-in multiplexer, rich color support
+- **Official repo**: [Ghostty on GitHub](https://github.com/ghostty-org/ghostty)
+
+
