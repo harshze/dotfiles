@@ -1,15 +1,11 @@
 # Set a custom session root path. Default is `$HOME`.
 # Must be called before `initialize_session`.
-session_root "~/.config/"
+session_root "~/dotfiles/"
 
 # Create session with specified name if it does not already exist. If no
 # argument is given, session name will be based on layout file name.
 if initialize_session "config"; then
-  new_window "config"
-  new_window "github"
-
-  select_window "github"
-  run_cmd "cd ~/github/dotfiles/ && clear"
+  new_window "dotfiles"
 
   select_window "config"
 fi
