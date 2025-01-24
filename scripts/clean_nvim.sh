@@ -1,7 +1,14 @@
 #!/bin/bash
+# Prompt for confirmation
+echo "Are you sure you want to remove all Neovim configurations and state files? (y/n)"
+read -r confirmation
+
+if [[ $confirmation != "y" ]]; then
+  echo "Operation cancelled."
+  exit 0
+fi
 
 # Remove Kickstart Neovim configuration folder
-
 rm -rf ~/.config/nvim/*
 
 # Remove Neovim plugin and state files

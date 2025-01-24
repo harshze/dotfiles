@@ -39,9 +39,9 @@ alias sound='pavucontrol'
 alias volume='pavucontrol'
 alias gpt='tgpt'
 #scripts
-alias nvimreset='~/scripts/clean_nvim.sh'
-alias cleansystem='~/scripts/cleansystem.sh'
-alias mad1session='~/scripts/mad1.sh'
+alias nvimreset='~/dotfiles/scripts/clean_nvim.sh'
+alias cleansystem='~/dotfiles/scripts/cleansystem.sh'
+alias mad1session='~/dotfiles/scripts/mad1.sh'
 
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
