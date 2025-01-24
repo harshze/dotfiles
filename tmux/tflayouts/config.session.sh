@@ -7,7 +7,7 @@ session_root "~/dotfiles/"
 if initialize_session "config"; then
   new_window "dotfiles"
 
-  select_window "config"
+  select_window "dotfiles"
 fi
 
 # Finalize session creation and switch/attach to it.
