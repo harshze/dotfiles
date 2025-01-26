@@ -1,4 +1,4 @@
-window_root "~/.tmuxifier/layouts/"
+window_root "~/dotfiles/tmux/tflayouts/"
 
 new_window "tf-layouts"
 run_cmd "vim ."

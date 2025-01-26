@@ -27,7 +27,7 @@ alias ....='cd ../../../..'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
-alias tat='tmux attach-session'
+alias tat='tmux attach-session -d'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.

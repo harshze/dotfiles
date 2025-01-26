@@ -1,4 +1,4 @@
-window_root "~/.config/ghostty/"
+window_root "~/dotfiles/ghostty/"
 
 new_window "ghostty"
 run_cmd "vim config"
