@@ -7,14 +7,10 @@ exec_always --no-startup-id xrandr --output HDMI-A-0 --mode 1366x768 --rate 60.0
 exec_always --no-startup-id bash -c "pkill polybar; polybar toph"
 #ensures that polybar.sh file runs so that polybar opens in the external monitor too. Uncomment if you want polybar on ext. monitor
 #exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
-exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 #hides titlebar of applications in split mode
 for_window [class="^.*"] border pixel 0
-#client.focused #859900 #859900 #fdf6e3 #859900
-#rjekker/i3-battery-popup tool. Install from github to use it.  https://github.com/rjekker/i3-battery-popup
-exec --no-startup-id i3-battery-popup -n -L 20
-for_window [title="Battery Warning"] sticky enable
-
+#rjekker i3-battery-popup
+exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 #----------------------------------------------KEYBINDINGS-------------------------------------------------------------------------------------
 #brightness keybindings
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -26,9 +22,6 @@ bindsym $super+l exec --no-startup-id i3lock -t -i ~/.config/i3/lockscreen.png -
 #keybinding for file manager : nautilus
 bindsym $super+e exec --no-startup-id nemo
 bindsym $super+x exec --no-startup-id poweroff
-#tmux keybinding
-bindsym $super+t exec --no-startup-id ghostty -e "tmux new-session -s practice"
-
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 
 set $mod Mod1

@@ -94,6 +94,8 @@ cd() {
 #}
 
 #precmd() { update_title }
+#for i3-battery-popup
+export PATH="$HOME/scripts:$PATH"
 
 #Export Zig bath, used for ghostty build
 export PATH=$PATH:~/Documents/zig-linux-x86_64-0.14.0-dev.2568+42dac40b3
