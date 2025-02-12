@@ -42,7 +42,7 @@ alias gpt='tgpt'
 alias nvimreset='~/dotfiles/scripts/clean_nvim.sh'
 alias cleansystem='~/dotfiles/scripts/cleansystem.sh'
 alias mad1session='~/dotfiles/scripts/mad1.sh'
-
+alias ytdlp='~/dotfiles/scripts/ytdlp.sh'
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
