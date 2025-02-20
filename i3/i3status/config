@@ -1,0 +1,63 @@
+# General settings
+general {
+    colors = true
+    interval = 2
+    color_good = "#a6e3a1"
+    color_degraded = "#fab387"
+    color_bad = "#f38ba8"
+}
+
+# Module order
+order += "cpu_usage"
+order += "memory"
+order += "battery 0"
+order += "disk /"
+order += "wireless wlp3s0"
+order += "ethernet enp2s0"
+order += "volume pulse"
+order += "tztime local"
+order += "exec ~/.local/bin/bluetooth_status"
+order += "exec ~/.local/bin/kdeconnect_status"
+
+# Module configurations
+cpu_usage {
+    format = "CPU %usage"
+}
+
+memory {
+    format = "RAM %used"
+    threshold_degraded = "1G"
+    format_degraded = "RAM %free"
+}
+
+battery 0 {
+    format = "BAT %percentage"
+    format_down = "No battery"
+    last_full_capacity = true
+}
+
+disk "/" {
+    format = "/ %avail"
+}
+
+wireless wlp3s0 {
+    format_up = "WiFi: %ip"
+    format_down = "WiFi down"
+}
+
+ethernet enp2s0 {
+    format_up = "Eth: %ip"
+    format_down = "Eth down"
+}
+
+volume pulse {
+    format = "VOL %volume"
+    format_muted = "VOL muted"
+    device = "default"
+    on_click 1 = "pavucontrol"
+}
+
+tztime local {
+    format = "%H:%M"
+    on_click 3 = "gnome-calendar"
+}

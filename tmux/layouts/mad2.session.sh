@@ -3,7 +3,7 @@
 session_root "~/code/mad2/"
 
 # Create session with specified name if it does not already exist.
-if initialize_session "mad1"; then
+if initialize_session "mad2"; then
   # Create windows with specific names
   #split_h 50 # Split horizontally
 
