@@ -23,7 +23,7 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias ....='cd ../../../..'
-
+alias harsh='cd code/js'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
