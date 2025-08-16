@@ -23,12 +23,14 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias ....='cd ../../../..'
-alias harsh='cd code/js'
+alias harsh='cd code/js && t'
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
 alias tat='tmux attach -d -t'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
+alias mahamayakaalika='cmatrix'
+alias ramya='cmatrix'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
@@ -38,11 +40,15 @@ source ~/dotfiles/zsh/sc
 alias sound='pavucontrol'
 alias volume='pavucontrol'
 alias gpt='tgpt'
-#scripts
+
+#script
 alias nvimreset='~/dotfiles/scripts/clean_nvim.sh'
 alias cleansystem='~/dotfiles/scripts/cleansystem.sh'
 alias mad1session='~/dotfiles/scripts/mad1.sh'
 alias ytdlp='~/dotfiles/scripts/ytdlp.sh'
+alias vani1='~/raw_clips/vani1.sh'
+alias vaani='~/raw_clips/vaani.sh'
+alias manansh='cmatrix'
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
