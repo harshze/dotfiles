@@ -22,6 +22,7 @@ bindsym $super+l exec --no-startup-id i3lock -t -i ~/.config/i3/lockscreen.png -
 #keybinding for file manager : nautilus
 bindsym $super+e exec --no-startup-id nemo
 bindsym $super+x exec --no-startup-id poweroff
+bindsym $super+k exec --no-startup-id kdeconnect-sms
 #-----------------------------------------------------------------------------------------------------------------------------------------------
 
 set $mod Mod1
