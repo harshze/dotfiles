@@ -30,7 +30,6 @@ alias tks='tmux kill-server'
 alias tat='tmux attach -d -t'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
 alias mahamayakaalika='cmatrix'
-alias ramya='cmatrix'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
