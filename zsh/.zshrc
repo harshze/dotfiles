@@ -187,3 +187,6 @@ zinit cdreplay -q
 
 
 
+
+# opencode
+export PATH=/home/harsh/.opencode/bin:$PATH
