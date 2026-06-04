@@ -18,12 +18,13 @@ alias update='sudo apt update'
 
 alias p='python3'
 alias lgit='lazygit'
+
 #alias@cd
 alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias ....='cd ../../../..'
-alias harsh='cd code/js && t'
+
 #alias@tmux
 alias t='tmux'
 alias tks='tmux kill-server'
