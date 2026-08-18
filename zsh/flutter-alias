@@ -1,0 +1,6 @@
+alias f='flutter'
+alias fd='flutter doctor'  
+alias fdevices='flutter devices'
+alias fde='flutter devices'
+alias fr='flutter run'
+alias frun='flutter run'

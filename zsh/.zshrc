@@ -30,11 +30,11 @@ alias t='tmux'
 alias tks='tmux kill-server'
 alias tat='tmux attach -d -t'
 alias tsource='tmux source ~/.config/tmux/tmux.conf'
-alias mahamayakaalika='cmatrix'
 
 source ~/dotfiles/zsh/tflayouts-alias #go to this file to make tmuxifier layouts alias.
 source ~/dotfiles/zsh/git-alias       #go to this file to make git/github alias.
 source ~/dotfiles/zsh/sc
+source ~/dotfiles/zsh/flutter-alias
 
 #alias#pavucontrol : for volume
 alias sound='pavucontrol'
@@ -44,11 +44,6 @@ alias gpt='tgpt'
 #script
 alias nvimreset='~/dotfiles/scripts/clean_nvim.sh'
 alias cleansystem='~/dotfiles/scripts/cleansystem.sh'
-alias mad1session='~/dotfiles/scripts/mad1.sh'
-alias ytdlp='~/dotfiles/scripts/ytdlp.sh'
-alias vani1='~/raw_clips/vani1.sh'
-alias vaani='~/raw_clips/vaani.sh'
-alias manansh='cmatrix'
 #---------------------------------------------CUSTOM-CD-FUNCTIONS--------------------------------------------------------------------------------
 # Move unalias below the function definition
 unalias cd 2>/dev/null  # Ignore errors if the alias does not exist
@@ -185,9 +180,6 @@ autoload -Uz compinit && compinit
 
 # Zinit replay
 zinit cdreplay -q
-
-
-
 
 # opencode
 export PATH=/home/harsh/.opencode/bin:$PATH
